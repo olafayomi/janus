@@ -1,0 +1,21 @@
+vlans:
+    100:
+        name: "music"
+        unicast_flood: True
+    200:
+        name: "trusted"
+        unicast_flood: True
+    300:
+        name: "untrusted"
+        unicast_flood: True
+datapaths:
+    zodiac-fx:
+        dpid: 0x1
+        hardware: "ZodiacFX"
+        interfaces:
+            1:
+                native_vlan: 100
+                name: "clock"
+            2:
+                native_vlan: 200
+                name: "trusted"
